@@ -7,20 +7,36 @@ import Header from '../header'
 import './reset.css'
 import './index.styl'
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+const Layout = props => {
+  const {
+    lang = 'en',
+    children,
+  } = props
+
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            routes {
+              slug
+              routes {
+                link
+                slug
+              }
+            }
+          }
         }
       }
-    }
-  `)
+    `
+  )
+
+  console.log(site, lang)
 
   return (
     <>
-      <Header/>
+      <Header lang={lang} />
       <main>{children}</main>
       <footer>
         COPYRIGHT © {new Date().getFullYear()}, cwiselab.gise.ntnu.edu.tw
