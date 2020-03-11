@@ -1,0 +1,37 @@
+@import '../../../mixin'
+
+.site-switch
+  width 80px
+  height 80px
+  background-color $dark_transparent
+  position relative
+  overflow hidden
+  $display-flex()
+  
+  &:hover
+    overflow visible
+  
+  &__toggle-btn
+    width 80px
+    height 80px 
+    cursor pointer
+    $display-flex()
+    
+    &:after
+      content ''
+      display block
+      width 8px 
+      height 6px
+      margin 0 0 0 8px
+      background-image url('./img_dropdown_white.svg')
+      
+  &__menu
+    position absolute
+    top 80px
+    left 0
+  
+  &__menu-item
+    width 80px
+    height 80px
+    background-color $dark
+    $display-flex()

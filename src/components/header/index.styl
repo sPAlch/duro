@@ -1,4 +1,4 @@
-@import '../mixin'
+@import '../../mixin'
 
 .menu-opened
   position fixed
@@ -29,12 +29,10 @@
     margin 20px 0
 
     .nav-link
-      display flex      
       padding 0 40px
       height 40px
-      justify-content center
-      align-items center
       border-right 1px solid $white_transparent
+      $display-flex()
       
       &:last-child
         border none
@@ -43,58 +41,7 @@
       &:link
         color white
         text-decoration none
-  
-  .lang-switch
-    display flex
-    justify-content center
-    align-items center
-    width 80px
-    height 80px
-    background $dark_transparent
-
-.menu
-  position relative
-
-  .toogle-btn
-    width 80px
-    height 80px
-    background $orange
-    position relative
-    display flex
-    justify-content center
-    align-items center
-    cursor pointer
-  
-  .menu-list-wrap
-    z-index -1000
-    position fixed
-    background $dark_transparent
-    left 0
-    top 0
-    width 100vw
-    height 100vh
-    display flex
-    justify-content flex-end
-    opacity 0
-    transition opacity .5s
-
-    .menu-list
-      background $dark
-      width 320px
-      transform translate( 240px, 0)
-      transition transform .3s
-  
-  &--opened
-    .menu-list-wrap
-      z-index 1
-      opacity 1
       
-      .menu-list
-        transform translate( 0, 0)
-
-    .toogle-btn
-      z-index 100
-    
 .icon-bars
   width 24px
   height 2px
