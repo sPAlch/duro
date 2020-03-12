@@ -1,9 +1,17 @@
 import React from "react"
 
-const InvestigatePage = () => (
-  <div>
-  	Investigate Page
-  </div>
-)
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+
+const InvestigatePage = props => {
+  return(
+    <Layout lang={ props.pageContext.lang}>
+      <SEO 
+      	title="Duro" 
+      	lang={ props.pageContext.lang}
+      />
+    </Layout>
+  )
+}
 
 export default InvestigatePage

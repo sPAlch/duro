@@ -18,21 +18,26 @@
   
 .nav-bar
   height 80px
-  background $dark_transparent
+  background-color $dark
   display flex
   flex 1 0 0
   color white
   
+  &--transparent
+    background-color $dark_transparent  
+  
   nav 
     display flex
     flex 1 0 0
-    margin 20px 0
 
     .nav-link
-      padding 0 40px
-      height 40px
-      border-right 1px solid $white_transparent
-      $display-flex()
+      padding 20px 0
+      
+      &__label
+        padding 0 40px
+        height 40px
+        border-right 1px solid $white_transparent
+        $display-flex()
       
       &:last-child
         border none
@@ -41,6 +46,9 @@
       &:link
         color white
         text-decoration none
+      
+      &--active
+        background-color $orange
       
 .icon-bars
   width 24px

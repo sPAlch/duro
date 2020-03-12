@@ -38,6 +38,15 @@ exports.createPages = async ({ graphql, actions }) => {
     `
   )
 
+  const productType = [
+    'automotive',
+    'bicycle',
+    'motorcycle',
+    'atv',
+    'industrial',
+  ]
+
+
   const createRoutes = ({slug, template, routes}, lang, parent) => {
     if( slug && template ){
       const path = parent ? `/${parent}/${slug}` : slug
@@ -50,6 +59,20 @@ exports.createPages = async ({ graphql, actions }) => {
           pagePath: path,
         },
       })
+
+      if(slug === 'product'){
+         productType.map( type => {
+          createPage({
+            path: `${path}/${type}`,
+            component: pageTemplates[template] || pageTemplates['landing'],
+            context: {
+              slug,
+              lang,
+              pagePath: `${path}/${type}`,
+            },
+          })           
+         })       
+      }
     }
 
     if(routes) routes.map( route => createRoutes(route, lang, slug))

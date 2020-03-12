@@ -31,7 +31,7 @@ const MenuDrawer = ({navRoutes, site='en'}) => {
             {              
               navRoutes.map(({slug, url, label, subMenu = []}) => (
                 <li key={slug} className="menu__list-item">
-                  <a className="menu__nav-link" href={ url ? `${url}` : `${site}/${slug}`}>
+                  <a className="menu__nav-link" href={ url ? `${url}` : `/${site}/${slug === 'index' ? '' : slug}`}>
                     { label }
                   </a>                  
                   {
@@ -39,7 +39,7 @@ const MenuDrawer = ({navRoutes, site='en'}) => {
                       <a 
                         className="menu__sub-nav-link"
                         key={`${slug}-${subItem.slug}`} 
-                        href={ url ? `${url}` : `../${site}/${slug}/${subItem.slug}`}
+                        href={ url ? `${url}` : `/${site}/${slug}/${subItem.slug}`}
                       >
                         { subItem.label }
                       </a>

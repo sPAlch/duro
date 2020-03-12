@@ -32,8 +32,6 @@ const Layout = props => {
     `
   )
 
-  console.log(site, lang)
-
   return (
     <>
       <Header lang={lang} />

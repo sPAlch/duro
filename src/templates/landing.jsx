@@ -4,11 +4,12 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const LandingPage = props => {
-
-  console.log(props)
   return(
-    <Layout>
-      <SEO title="Duro" />
+    <Layout lang={ props.pageContext.lang}>
+      <SEO 
+      	title="Duro" 
+      	lang={ props.pageContext.lang}
+      />
     </Layout>
   )
 }
