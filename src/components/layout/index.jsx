@@ -3,6 +3,9 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from '../header'
+import Footer from '../footer'
+
+import { siteData } from '../site-data'
 
 import './reset.css'
 import './index.styl'
@@ -13,6 +16,7 @@ const Layout = props => {
     children,
   } = props
 
+  const navRoutes = siteData[lang] || siteData['en']
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -34,11 +38,9 @@ const Layout = props => {
 
   return (
     <>
-      <Header lang={lang} />
+      <Header lang={lang} navRoutes={navRoutes} />
       <main>{children}</main>
-      <footer>
-        COPYRIGHT © {new Date().getFullYear()}, cwiselab.gise.ntnu.edu.tw
-      </footer>
+      <Footer lang={lang} navRoutes={navRoutes} />
     </>
   )
 }

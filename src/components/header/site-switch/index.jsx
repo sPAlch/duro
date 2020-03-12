@@ -25,7 +25,7 @@ const SiteSwitch = ({site = 'en'}) => {
         {
           sites.filter( d => d !== site ).map( d => (
             <li key={sitesData[d].slug} className="site-switch__menu-item">
-              <Link to={sitesData[d].slug}>{sitesData[d].label}</Link>
+              <Link className="site-switch__link" to={sitesData[d].slug}>{sitesData[d].label}</Link>
             </li>
           ))
         }
