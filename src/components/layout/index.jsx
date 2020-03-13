@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from '../header'
 import Footer from '../footer'
 
-import { siteData } from '../site-data'
+import { siteData } from '../../utils/site-data'
 
 import './reset.css'
 import './index.styl'

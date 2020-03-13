@@ -46,6 +46,22 @@ exports.createPages = async ({ graphql, actions }) => {
     'industrial',
   ]
 
+  const aboutCat = [
+    'philosophy',
+    'brand-concept',
+    'location',
+  ]
+
+  const investigateCat = [
+    'financial-information',
+    'stock',
+    'major-news',
+    'shareholders',
+    'earnings-call',
+    'investor-relations-contact',
+    'governance',
+    'investor-relations',
+  ]
 
   const createRoutes = ({slug, template, routes}, lang, parent) => {
     if( slug && template ){
@@ -61,7 +77,7 @@ exports.createPages = async ({ graphql, actions }) => {
       })
 
       if(slug === 'product'){
-         productType.map( type => {
+        productType.map( type => {
           createPage({
             path: `${path}/${type}`,
             component: pageTemplates[template] || pageTemplates['landing'],
@@ -71,8 +87,37 @@ exports.createPages = async ({ graphql, actions }) => {
               pagePath: `${path}/${type}`,
             },
           })           
-         })       
+        })       
       }
+
+      if(slug === 'about'){
+        aboutCat.map( cat => {
+          createPage({
+            path: `${path}/${cat}`,
+            component: pageTemplates[template] || pageTemplates['landing'],
+            context: {
+              slug,
+              lang,
+              pagePath: `${path}/${cat}`,
+            },
+          })           
+        })       
+      }
+
+      if(slug === 'investigate'){
+        investigateCat.map( cat => {
+          createPage({
+            path: `${path}/${cat}`,
+            component: pageTemplates[template] || pageTemplates['landing'],
+            context: {
+              slug,
+              lang,
+              pagePath: `${path}/${cat}`,
+            },
+          })           
+        })       
+      }
+
     }
 
     if(routes) routes.map( route => createRoutes(route, lang, slug))

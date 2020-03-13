@@ -33,6 +33,20 @@ export const siteData = {
     {
       slug: 'about',
       label: 'About Us',
+      subMenu: [
+        {
+          slug: 'philosophy',
+          label: 'Industrial',
+        },
+        {
+          slug: 'brand-concept',
+          label: 'Industrial',
+        },
+        {
+          slug: 'location',
+          label: 'Industrial',
+        },
+      ]
     },
     {
       slug: '',
