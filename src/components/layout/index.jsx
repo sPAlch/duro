@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from '../header'
 import Footer from '../footer'
+import BreadCrumbs from '../bread-crumbs'
 
 import { siteData } from '../../utils/site-data'
 
@@ -39,6 +40,7 @@ const Layout = props => {
   return (
     <>
       <Header lang={lang} navRoutes={navRoutes} />
+      <BreadCrumbs lang={lang} navRoutes={navRoutes} />
       <main>{children}</main>
       <Footer lang={lang} navRoutes={navRoutes} />
     </>

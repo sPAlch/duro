@@ -36,22 +36,22 @@ export const siteData = {
       subMenu: [
         {
           slug: 'philosophy',
-          label: 'Industrial',
+          label: 'Philosophy',
         },
         {
           slug: 'brand-concept',
-          label: 'Industrial',
+          label: 'Brand Concept',
         },
         {
           slug: 'location',
-          label: 'Industrial',
+          label: 'Location',
         },
-      ]
+      ],
     },
     {
       slug: '',
       label: 'Online Shop',
-      url: '#'
+      url: 'https://www.amazon.com/'
     },
   ],
   zh: [
@@ -88,10 +88,58 @@ export const siteData = {
     {
       slug: 'about',
       label: '關於華豐',
+      subMenu: [
+        {
+          slug: 'philosophy',
+          label: '企業理念',
+        },
+        {
+          slug: 'brand-concept',
+          label: '品牌概念',
+        },
+        {
+          slug: 'location',
+          label: '全球分布',
+        },
+      ],
     },
     {
       slug: 'investigate',
       label: '投資人關係',
+      subMenu: [
+        {
+          slug: 'financial-information',
+          label: '財務資訊',
+        },
+        {
+          slug: 'stock',
+          label: '股價及股利',
+        },
+        {
+          slug: 'major-news',
+          label: '重大訊息',
+        },
+        {
+          slug: 'shareholders',
+          label: '股東會與董事會資訊',
+        },
+        {
+          slug: 'earnings-call',
+          label: '法說會資訊',
+        },
+        {
+          slug: 'investor-relations-contact',
+          label: '投資人關係聯絡窗口',
+        },
+        {
+          slug: 'governance',
+          label: '公司治理',
+        },
+        {
+          slug: 'investor-relations',
+          label: '利害關係人專區',
+        },
+      ],
     },
   ]
 }

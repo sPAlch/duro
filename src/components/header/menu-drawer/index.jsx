@@ -6,8 +6,6 @@ import classNames from 'classnames'
 import './index.styl'
 
 const MenuDrawer = ({navRoutes, site='en'}) => {
-  console.log(navRoutes)
-
   const [menuOpened, setMenuOpened] = useState(false)
 
   useEffect(() => {

@@ -23,13 +23,24 @@ const Header = ({lang, navRoutes}) => {
         <nav>
           {
             navRoutes.filter( route => route.slug !== 'index').map( route => (
-              <Link 
-                key={route.slug}
-                getProps={isPartiallyActive}
-                to={ route.url ? `${route.url}` : `/${lang}/${route.slug}`}
-              >
-                <div className="nav-link__label">{ route.label }</div>
-              </Link>
+              route.url ? (
+                <a 
+                  key={route.slug}
+                  href={ route.url }
+                  target="blank"
+                  className="nav-link"
+                >
+                  <div className="nav-link__label">{ route.label }</div>
+                </a>
+              ) : (
+                <Link 
+                  key={route.slug}
+                  getProps={isPartiallyActive}
+                  to={`/${lang}/${route.slug}`}
+                >
+                  <div className="nav-link__label">{ route.label }</div>
+                </Link>
+              )
             ))
           }
         </nav>
