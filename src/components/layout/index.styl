@@ -1,13 +1,24 @@
 @import '../../mixin'
 
 html
-  font-family 'Roboto Slab', 'Arial', 'STHeiti', 'Microsoft JhengHei', serif
+  font-family 'STHeiti', 'Microsoft JhengHei', 'Roboto Slab', 'Arial', sans-serif
   color $dark
 
 #gatsby-focus-wrapper
-	width 100vw
-	min-height 100vh
-	$display-flex(column)
-	
-	main
-		flex 1 0 0
+  width 100vw
+  min-height 100vh
+  $display-flex(column)
+  
+  main
+    flex 1 0 0
+    width 100%
+    $display-flex(row, center, stretch)
+  
+  .content
+    flex 1 0 0
+
+a
+  &:link
+  &:visited
+    color $dark
+    text-decoration none

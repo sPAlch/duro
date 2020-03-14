@@ -1,30 +1,45 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import classNames from 'classnames'
-import { Link, useLocation } from "@reach/router"
+import { Link } from "@reach/router"
 
 import './index.styl'
 
-const BreadCrumbs = ({lang, navRoutes}) => {
-  const location = useLocation()
-  const paths = location.pathname.split('/')
+const BreadCrumbs = ({lang, routesMap, paths}) => {
   const crumbs = []
-  const routesMap = {}
+  const isActive = ({ href, location }) => {
+    const isCurrent = href === location.pathname.replace(/\/$/, '')
 
-  const setMap = (routes, parent) => {
-    routes.forEach( d => {
-      const path = `${parent}${d.slug !== 'index' ? '/' + d.slug : '' }`
-      if(d.slug) routesMap[path] = d.label
-      if(d.subMenu){ setMap(d.subMenu, path) }
-    })    
+    return({
+      className: `bread-crumbs__link ${ isCurrent ? 'bread-crumbs__link--active' : '' }`
+    })
   }
 
-  setMap(navRoutes, lang)
-  console.log(paths, location.pathname, routesMap)
+  paths.reduce( (prev, current) => {
+    const path = prev ? `${prev}/${current}` : current
+    crumbs.push({
+      slug: path,
+      label: routesMap[path],
+    })
+    return path
+  }, '')
 
   return (
-    <div className="bread-crumbs">
-    </div>
+    <>
+      {
+        crumbs.length > 1 && (
+          <div className="bread-crumbs">
+            {
+              crumbs.map( crumb => (
+                <Link to={crumb.slug} key={crumb.slug} getProps={isActive}>
+                  {crumb.label}
+                </Link>
+              ))
+            }
+          </div>
+        )
+      }
+    </>
   )
 }
 

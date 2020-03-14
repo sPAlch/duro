@@ -46,7 +46,7 @@ const Header = ({lang, navRoutes}) => {
         </nav>
         <SiteSwitch site={lang} />
       </div>
-      <MenuDrawer navRoutes={navRoutes} />
+      <MenuDrawer navRoutes={navRoutes} site={lang} />
     </header>
   )
 }

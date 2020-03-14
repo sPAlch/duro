@@ -1,7 +1,7 @@
 import React from "react"
 import { Redirect } from '@reach/router'
 
-const navLang = navigator.language || navigator.userLanguage
+const navLang = process.browser ? ( navigator.language || navigator.userLanguage ) : 'en'
 const lang = navLang.split('-')[0]
 const SITE_MAP = ['en', 'zh']
 

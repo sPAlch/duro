@@ -14,13 +14,24 @@ const Footer = ({lang, navRoutes}) => {
           <nav className="footer__nav">
             {
               navRoutes.filter( route => route.slug !== 'index').map( route => (
-                <Link 
-                  key={route.slug}
-                  to={ route.url ? `${route.url}` : `/${lang}/${route.slug}`}
-                  className="footer__link footer__nav-link"
-                >
-                  <div className="footer__link-label">{ route.label }</div>
-                </Link>
+                route.url ? (
+                  <a 
+                    key={route.slug}
+                    href={ route.url }
+                    target="blank"
+                    className="footer__link footer__nav-link"
+                  >
+                    <div className="footer__link-label">{ route.label }</div>
+                  </a>
+                ) : (
+                  <Link 
+                    key={route.slug}
+                    to={`/${lang}/${route.slug}`}
+                    className="footer__link footer__nav-link"
+                  >
+                    <div className="footer__link-label">{ route.label }</div>
+                  </Link>
+                )
               ))
             }
           </nav>

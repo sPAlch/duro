@@ -1,81 +1,24 @@
 @import '../../mixin'
 
-.header
-  display flex
-  width 100%  
-
-.index-link
-  width 240px
-  height 80px
-  display flex
-  align-items center
-  justify-content center
+.bread-crumbs
+  padding 36px 0 14px
+  margin 0 40px
+  align-self flex-start
+  $display-flex(row, flex-start)
   
-.nav-bar
-  height 80px
-  background-color $dark
-  display flex
-  flex 1 0 0
-  color white
-  
-  &--transparent
-    background-color $dark_transparent  
-  
-  nav 
-    display flex
-    flex 1 0 0
-
-    .nav-link
-      padding 20px 0
-      
-      &__label
-        padding 0 40px
-        height 40px
-        border-right 1px solid $white_transparent
-        $display-flex()
-      
-      &:last-child
-        border none
-
-      &:visited
-      &:link
-        color white
-        text-decoration none
-      
-      &--active
-        background-color $orange
-      
-.icon-bars
-  width 24px
-  height 2px
-  background white
-  position relative
-  
-  &:before
-  &:after
-    content ''
+  &__link
+    padding 0 4px
     display block
-    width 24px
-    height 2px
-    background white
-    position absolute
-    transition transform .5s, top .5s
-
-  &:before
-    top -10px    
-
-  &:after
-    top 10px
-    
-  &--crossed
-    background transparent
-
-    &:before
+    font-size $font_button
+        
     &:after
-      top 0
+      content ' / '
+          
+    &:last-child
+      &:after
+        content ''
 
-    &:before      
-      transform rotate(45deg)
-
-    &:after
-      transform rotate(-45deg)
+    &--active
+      &:link
+      &:visited
+        color $orange

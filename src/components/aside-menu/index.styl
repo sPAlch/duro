@@ -1,0 +1,18 @@
+@import '../../mixin'
+
+.aside
+  background-color $light_grey
+  min-width 240px
+  padding 40px
+  $display-flex(column, flex-start, stretch)
+
+  &__link
+    display block
+    padding 12px 0
+    line-height 1.2
+    font-size $font_sub_title 
+    
+    &--active
+      &:link
+      &:visited
+        color $orange

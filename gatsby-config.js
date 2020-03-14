@@ -31,6 +31,14 @@ module.exports = {
         path: `${__dirname}/src/assests`,
       },
     },
+    {
+      resolve: `gatsby-source-mongodb`,
+      options: {
+        dbName: `duro`,
+        server: { address: `localhost`, port: 27017 },
+        collection: `restaurants`,
+      },
+    },    
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-stylus`,
@@ -38,5 +46,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-  pathPrefix: '/duro',
 }

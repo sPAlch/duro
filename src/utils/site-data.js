@@ -7,6 +7,7 @@ export const siteData = {
     {
       slug: 'product',
       label: 'Products',
+      hasPage: true,
       subMenu: [
         {
           slug: 'automotive',
@@ -33,6 +34,7 @@ export const siteData = {
     {
       slug: 'about',
       label: 'About Us',
+      hasPage: false,
       subMenu: [
         {
           slug: 'philosophy',
@@ -57,11 +59,12 @@ export const siteData = {
   zh: [
     {
       slug: 'index',
-      label: 'Home',
+      label: '首頁',
     },
     {
       slug: 'product',
       label: '輪胎商品',
+      hasPage: true,
       subMenu: [
         {
           slug: 'automotive',
@@ -88,6 +91,7 @@ export const siteData = {
     {
       slug: 'about',
       label: '關於華豐',
+      hasPage: false,
       subMenu: [
         {
           slug: 'philosophy',
@@ -106,6 +110,7 @@ export const siteData = {
     {
       slug: 'investigate',
       label: '投資人關係',
+      hasPage: false,
       subMenu: [
         {
           slug: 'financial-information',
