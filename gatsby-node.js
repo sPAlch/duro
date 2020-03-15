@@ -125,7 +125,3 @@ exports.createPages = async ({ graphql, actions }) => {
 
   data.site.siteMetadata.routes.map(route => createRoutes(route, route.slug))
 }
-
-exports.onCreatePage = async ({ page, actions }) => {
-  console.log('onCreatePage', page.path)
-}
