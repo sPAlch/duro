@@ -31,6 +31,7 @@ module.exports = {
         path: `${__dirname}/src/assests`,
       },
     },
+    /*
     {
       resolve: `gatsby-source-mongodb`,
       options: {
@@ -39,6 +40,7 @@ module.exports = {
         collection: [`sites`, `banner`, `categorie`, `dealer`],
       },
     },    
+    */
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-stylus`,
