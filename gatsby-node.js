@@ -38,25 +38,6 @@ exports.createPages = async ({ graphql, actions }) => {
     `
   )
 
-  const { data: mongoData } = await graphql(`
-    {
-      allMongodbDuroRestaurants(limit: 1000) {
-        nodes {
-          borough
-          cuisine
-          address {
-            building
-            coord
-            street
-            zipcode
-          }
-        }
-      }
-    }
-  `)
-
-  console.log(mongoData)
-
   const productType = [
     'automotive',
     'bicycle',

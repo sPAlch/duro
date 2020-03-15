@@ -36,7 +36,7 @@ module.exports = {
       options: {
         dbName: `duro`,
         server: { address: `localhost`, port: 27017 },
-        collection: `restaurants`,
+        collection: [`sites`, `banner`, `categorie`, `dealer`],
       },
     },    
     `gatsby-transformer-sharp`,

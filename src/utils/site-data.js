@@ -148,3 +148,151 @@ export const siteData = {
     },
   ]
 }
+
+export const porductCategory = [
+  {
+    slug: 'automotive',
+    label: 'Automotive',
+    cover: 'http://spalch.net/duro/assests/img_product_automotive.png',
+    pdf: 'http://spalch.net/duro/assests/material-design.pdf',
+    description: 'Soft fields and loose dirt are no match for deep lugs and tuned ribs. The Agricultural series of small farm tractor tires allow you to focus on your tasks with little concern for traction and durability.',
+    types: [
+      {
+        slug: 'all',
+        label: 'All-Terrain'
+      },
+      {
+        slug: 'mud-sand',
+        label: 'Mud / Sand'
+      },
+      {
+        slug: 'sport',
+        label: 'Sport'
+      },
+      {
+        slug: 'utility',
+        label: 'Utility'
+      },
+      {
+        slug: 'racing',
+        label: 'On road/Racing'
+      },
+    ],
+  },
+  {
+    slug: 'bicycle',
+    label: 'Bicycle',
+    cover: 'http://spalch.net/duro/assests/img_product_bicycle.png',
+    pdf: 'http://spalch.net/duro/assests/material-design.pdf',
+    description: 'Soft fields and loose dirt are no match for deep lugs and tuned ribs. The Agricultural series of small farm tractor tires allow you to focus on your tasks with little concern for traction and durability.',
+    types: [
+      {
+        slug: 'all',
+        label: 'All-Terrain'
+      },
+      {
+        slug: 'mud-sand',
+        label: 'Mud / Sand'
+      },
+      {
+        slug: 'sport',
+        label: 'Sport'
+      },
+      {
+        slug: 'utility',
+        label: 'Utility'
+      },
+      {
+        slug: 'racing',
+        label: 'On road/Racing'
+      },
+    ],
+  },
+  {
+    slug: 'motorcycle',
+    label: 'Motorcycle',
+    cover: 'http://spalch.net/duro/assests/img_product_motorcycle.png',
+    pdf: 'http://spalch.net/duro/assests/material-design.pdf',
+    description: 'Soft fields and loose dirt are no match for deep lugs and tuned ribs. The Agricultural series of small farm tractor tires allow you to focus on your tasks with little concern for traction and durability.',
+    types: [
+      {
+        slug: 'all',
+        label: 'All-Terrain'
+      },
+      {
+        slug: 'mud-sand',
+        label: 'Mud / Sand'
+      },
+      {
+        slug: 'sport',
+        label: 'Sport'
+      },
+      {
+        slug: 'utility',
+        label: 'Utility'
+      },
+      {
+        slug: 'racing',
+        label: 'On road/Racing'
+      },
+    ],
+  },
+  {
+    slug: 'atv',
+    label: 'ATV',
+    cover: 'http://spalch.net/duro/assests/img_product_atv.png',
+    pdf: 'http://spalch.net/duro/assests/material-design.pdf',
+    description: 'Soft fields and loose dirt are no match for deep lugs and tuned ribs. The Agricultural series of small farm tractor tires allow you to focus on your tasks with little concern for traction and durability.',
+    types: [
+      {
+        slug: 'all',
+        label: 'All-Terrain'
+      },
+      {
+        slug: 'mud-sand',
+        label: 'Mud / Sand'
+      },
+      {
+        slug: 'sport',
+        label: 'Sport'
+      },
+      {
+        slug: 'utility',
+        label: 'Utility'
+      },
+      {
+        slug: 'racing',
+        label: 'On road/Racing'
+      },
+    ],
+  },
+  {
+    slug: 'industrial',
+    label: 'Industrial',
+    cover: 'http://spalch.net/duro/assests/img_product_industrial.png',
+    pdf: 'http://spalch.net/duro/assests/material-design.pdf',
+    description: 'Soft fields and loose dirt are no match for deep lugs and tuned ribs. The Agricultural series of small farm tractor tires allow you to focus on your tasks with little concern for traction and durability.',
+    types: [
+      {
+        slug: 'all',
+        label: 'All-Terrain'
+      },
+      {
+        slug: 'mud-sand',
+        label: 'Mud / Sand'
+      },
+      {
+        slug: 'sport',
+        label: 'Sport'
+      },
+      {
+        slug: 'utility',
+        label: 'Utility'
+      },
+      {
+        slug: 'racing',
+        label: 'On road/Racing'
+      },
+    ],
+  },
+]
